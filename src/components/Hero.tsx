@@ -12,36 +12,33 @@ export default function Hero() {
   return (
     <div
       ref={container}
-      className="relative flex items-end justify-between h-screen overflow-hidden pb-14 px-8"
+      className="relative flex items-center justify-center h-screen overflow-hidden"
     >
-      <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0 w-full h-full"
+      >
         <div className="relative w-full h-full">
           <img
             src="https://cdn.poehali.dev/projects/16b84e5c-2f6a-4ae3-8af2-47d4978a0861/files/c23eaabc-501f-4dc8-93e4-097ab497c12d.jpg"
             alt="Мебельный склад"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
       </motion.div>
 
-      <div className="relative z-10 text-white max-w-2xl">
-        <p className="text-xs uppercase tracking-[0.3em] mb-4 text-white/60">Прямо с производства</p>
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.9] mb-6">
-          МЕБЕЛЬ<br />СО СКЛАДА
+      <div className="relative z-10 text-center text-white px-6">
+        <p className="text-sm uppercase tracking-widest mb-4 opacity-70">Прямо с производства</p>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-tight">
+          МЕБЕЛЬ<br/>СО СКЛАДА
         </h1>
-        <p className="text-base md:text-lg text-white/75 max-w-md leading-relaxed">
+        <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-10">
           Остатки от ведущих мебельных производств — по ценам ниже рынка до 70%
         </p>
-      </div>
-
-      <div className="relative z-10 flex flex-col items-end gap-4">
-        <button className="bg-white text-black px-7 py-3 uppercase text-xs tracking-widest font-semibold hover:bg-white/90 transition-all duration-300">
+        <button className="border border-white text-white px-8 py-3 uppercase text-sm tracking-widest hover:bg-white hover:text-black transition-all duration-300">
           Смотреть каталог
         </button>
-        <a href="#about" className="text-white/50 text-xs uppercase tracking-widest hover:text-white transition-colors duration-300">
-          Узнать больше ↓
-        </a>
       </div>
     </div>
   );
