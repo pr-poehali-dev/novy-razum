@@ -1,21 +1,43 @@
 export default function Featured() {
+  const stats = [
+    { value: "200+", label: "Производителей" },
+    { value: "70%", label: "Скидка от цены" },
+    { value: "5 000+", label: "Позиций на складе" },
+  ];
+
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
-      <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-neutral-50">
+      <div className="flex-1 lg:h-screen lg:sticky lg:top-0 overflow-hidden">
         <img
-          src="/images/woman-horse.jpg"
-          alt="Woman on horse in countryside"
+          src="https://cdn.poehali.dev/projects/16b84e5c-2f6a-4ae3-8af2-47d4978a0861/files/bcd0a846-11bb-4e04-affc-4fc7345dd393.jpg"
+          alt="Мебельный шоурум"
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Функции, которые не стоят на месте</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Не просто список возможностей — живые, дышащие акценты. Каждая функция адаптируется к движению, контексту и настроению,
-          оживляя продукт с первого взгляда.
-        </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Подробнее
+
+      <div className="flex-1 flex flex-col justify-between px-8 py-16 lg:py-24 lg:max-w-xl">
+        <div>
+          <p className="uppercase text-xs tracking-widest text-neutral-400 mb-6">Почему мы</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight mb-8">
+            Мебель от производителя — без наценок посредников
+          </h2>
+          <p className="text-neutral-500 text-lg leading-relaxed mb-12">
+            Мы выкупаем остатки напрямую с фабрик и предлагаем их вам. 
+            Никаких посредников, никаких накруток — только качественная мебель по честной цене.
+          </p>
+
+          <div className="grid grid-cols-3 gap-6 mb-12 border-t border-neutral-200 pt-10">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <p className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-1">{s.value}</p>
+                <p className="text-xs text-neutral-400 uppercase tracking-wide">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button className="bg-neutral-900 text-white px-8 py-4 text-sm uppercase tracking-widest hover:bg-neutral-700 transition-colors duration-300 w-fit">
+          Получить прайс-лист →
         </button>
       </div>
     </div>
